@@ -1,5 +1,5 @@
 provider "github" {
-  token = var.github_token # TODO: secret
+  token = var.github_token
 }
 
 terraform {
@@ -8,6 +8,13 @@ terraform {
     github = {
       source  = "integrations/github"
       version = "~> 5.1"
+    }
+  }
+
+  cloud {
+    organization = "skkzsh"
+    workspaces {
+      name = "github_as_code"
     }
   }
 }
