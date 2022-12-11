@@ -1,0 +1,18 @@
+name: Terraform Apply
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform-apply:
+    runs-on: [ ubuntu-latest ]
+    environment: this
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/terraform
+        with:
+          should_apply: 'yes'

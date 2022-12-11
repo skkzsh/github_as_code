@@ -1,0 +1,29 @@
+name: Terraform
+description: Terraform
+
+inputs:
+  should_apply:
+    default: 'no'
+    description: Should terraform apply or not
+
+runs:
+  using: composite
+
+  steps:
+    - run: echo github_token = \"$SKKZSH_GITHUB_TOKEN\" > terraform.tfvars
+      shell: bash
+
+    - uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.3.6
+        terraform_wrapper: false
+
+    - run: terraform init
+      shell: bash
+
+    - run: terraform plan
+      shell: bash
+
+    - if: inputs.should_apply == 'yes'
+      run: echo terraform apply # TODO: 封印開放
+      shell: bash

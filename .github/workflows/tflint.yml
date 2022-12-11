@@ -1,0 +1,21 @@
+name: TFlint
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  tflint:
+    runs-on: [ ubuntu-latest ]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: terraform-linters/setup-tflint@v2
+        with:
+          tflint_version: v0.43.0
+
+      - name: tflint
+        run: find . -type f -name '*.tf' -exec dirname {} \; | sort -u | xargs -I% tflint %
