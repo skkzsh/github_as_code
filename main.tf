@@ -4,6 +4,9 @@ locals {
     {
       name : "github_as_code"
     },
+    {
+      name : "try-actions"
+    },
 
     {
       name : "note"
