@@ -9,6 +9,9 @@ resource "github_repository" "this" {
   has_issues   = try(var.repository_options.has_issues, null)
   homepage_url = try(var.repository_options.homepage_url, null)
 
+  allow_rebase_merge = false
+  allow_squash_merge = false
+
   security_and_analysis {
     advanced_security {
       status = "enabled"
