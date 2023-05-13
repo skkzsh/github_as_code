@@ -1,5 +1,6 @@
 resource "github_repository" "this" {
   name = var.repository_name
+  description = try(var.repository_options.description, null)
 
   vulnerability_alerts = true
   has_projects         = false # TODO

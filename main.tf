@@ -1,28 +1,19 @@
 locals {
-  # TODO
   repositories = [
-    {
-      name : "github_as_code"
-    },
-    {
-      name : "try-actions"
-    },
-
-#    {
-#      name : "dsa-kotlin"
-#    },
-#
-#    {
-#      name : "ctci-kotlin"
-#    },
-#
-#    {
-#      name : "ctci"
-#    },
+    { name : "github_as_code" },
+    { name : "try-actions" },
 
     {
-      name : "my_book_algorithm_solution"
+      name : "dsa-kotlin"
+      description: "Data Structures and Algorithms with Kotlin"
     },
+    {
+      name : "ctci-kotlin"
+      description: "CTCI with Kotlin"
+      has_wiki : false
+    },
+    { name : "ctci" },
+    { name : "my_book_algorithm_solution" },
 
     {
       name : "note"
