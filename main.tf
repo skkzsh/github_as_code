@@ -19,10 +19,10 @@ locals {
 #    {
 #      name : "ctci"
 #    },
-#
-#    {
-#      name : "my_book_algorithm_solution"
-#    },
+
+    {
+      name : "my_book_algorithm_solution"
+    },
 
     {
       name : "note"
