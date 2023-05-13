@@ -13,9 +13,9 @@ resource "github_repository" "this" {
   allow_squash_merge = false
 
   security_and_analysis {
-    advanced_security {
-      status = "enabled"
-    }
+#    advanced_security {
+#      status = "enabled"
+#    }
 
     secret_scanning {
       status = "enabled"

@@ -8,6 +8,22 @@ locals {
       name : "try-actions"
     },
 
+#    {
+#      name : "dsa-kotlin"
+#    },
+#
+#    {
+#      name : "ctci-kotlin"
+#    },
+#
+#    {
+#      name : "ctci"
+#    },
+#
+#    {
+#      name : "my_book_algorithm_solution"
+#    },
+
     {
       name : "note"
       homepage_url : "https://github.com/skkzsh/note/wiki"
