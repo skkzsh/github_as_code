@@ -16,6 +16,11 @@ locals {
     { name : "my_book_algorithm_solution" },
 
     {
+      name : "llm-notebook"
+      description: "Jupyter Notebook about LLM"
+    },
+
+    {
       name : "note"
       homepage_url : "https://github.com/skkzsh/note/wiki"
     },
