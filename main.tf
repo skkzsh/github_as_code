@@ -5,11 +5,11 @@ locals {
 
     {
       name : "dsa-kotlin"
-      description: "Data Structures and Algorithms with Kotlin"
+      description : "Data Structures and Algorithms with Kotlin"
     },
     {
       name : "ctci-kotlin"
-      description: "CTCI with Kotlin"
+      description : "CTCI with Kotlin"
       has_wiki : false
     },
     { name : "ctci" },
@@ -17,7 +17,7 @@ locals {
 
     {
       name : "llm-notebook"
-      description: "Jupyter Notebook about LLM"
+      description : "Jupyter Notebook about LLM"
     },
 
     {

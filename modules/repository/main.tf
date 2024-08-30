@@ -1,6 +1,7 @@
 resource "github_repository" "this" {
-  name = var.repository_name
+  name        = var.repository_name
   description = try(var.repository_options.description, null)
+  topics      = try(var.repository_options.topics, null)
 
   vulnerability_alerts = true
   has_projects         = false # TODO
@@ -14,9 +15,9 @@ resource "github_repository" "this" {
   allow_squash_merge = false
 
   security_and_analysis {
-#    advanced_security {
-#      status = "enabled"
-#    }
+    # advanced_security {
+    #   status = "enabled"
+    # }
 
     secret_scanning {
       status = "enabled"
@@ -24,8 +25,8 @@ resource "github_repository" "this" {
 
     secret_scanning_push_protection {
       status = "enabled"
-   }
-}
+    }
+  }
 
   lifecycle {
     prevent_destroy = true
