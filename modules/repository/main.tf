@@ -31,11 +31,16 @@ resource "github_repository" "this" {
     }
   }
 
+  # TODO
+  # auto_init          = true
+  # archive_on_destroy = true
+
   lifecycle {
     prevent_destroy = true
   }
 }
 
+# TODO
 # resource "terraform_data" "initial_commit" {
 #   provisioner "local-exec" {
 #     command = <<EOT
