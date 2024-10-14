@@ -3,6 +3,8 @@
 locals {
   repos = [ # importしたいリポジトリに応じて適宜編集する
     # "github_as_code", # 例
+    "runner",
+    "vector_db_container",
   ]
 }
 

@@ -1,7 +1,11 @@
 locals {
   repositories = [
-    { name : "github_as_code" },
+    {
+      name : "github_as_code"
+      description : "GitHub as Code"
+    },
     { name : "try-actions" },
+    { name : "runner" },
 
     {
       name : "dsa-kotlin"
@@ -13,11 +17,18 @@ locals {
       has_wiki : false
     },
     { name : "ctci" },
-    { name : "my_book_algorithm_solution" },
+    {
+      name : "my_book_algorithm_solution"
+      description : "『問題解決力を鍛える!アルゴリズムとデータ構造』を解く"
+    },
 
     {
       name : "llm-notebook"
       description : "Jupyter Notebook about LLM"
+    },
+    {
+      name : "vector_db_container"
+      description : "Vector database container"
     },
 
     {
