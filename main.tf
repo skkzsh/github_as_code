@@ -48,6 +48,12 @@ locals {
       name : "nginx"
       has_wiki : false
     },
+
+    {
+      name : "isucon-playbook"
+      description : "ISUCON 秘伝"
+      visibility : "private"
+    },
   ]
 }
 
