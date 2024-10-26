@@ -9,7 +9,7 @@ resource "github_repository" "this" {
   has_wiki      = try(var.repository_options.has_wiki, true)
   has_issues    = try(var.repository_options.has_issues, null)
   has_projects  = try(var.repository_options.has_projects, null)
-  has_downloads = true  # TODO
+  has_downloads = true # TODO
 
   allow_rebase_merge = false
   allow_squash_merge = false
@@ -24,12 +24,20 @@ resource "github_repository" "this" {
     #   status = "enabled"
     # }
 
-    secret_scanning {
-      status = "enabled"
+    // free plan の private repository では secret scanning が使えない
+
+    dynamic "secret_scanning" {
+      for_each = try(var.repository_options.visibility, null) == "private" ? [] : [""]
+      content {
+        status = "enabled"
+      }
     }
 
-    secret_scanning_push_protection {
-      status = "enabled"
+    dynamic "secret_scanning_push_protection" {
+      for_each = try(var.repository_options.visibility, null) == "private" ? [] : [""]
+      content {
+        status = "enabled"
+      }
     }
   }
 
