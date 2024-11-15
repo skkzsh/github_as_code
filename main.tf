@@ -4,7 +4,10 @@ locals {
       name : "github_as_code"
       description : "GitHub as Code"
     },
-    { name : "try-actions" },
+    {
+      name : "try-actions"
+      visibility : "private"
+    },
     { name : "runner" },
 
     {
@@ -53,6 +56,20 @@ locals {
       name : "isucon-playbook"
       description : "ISUCON 秘伝"
       visibility : "private"
+      has_issues: true
+      has_projects: true
+    },
+    {
+      name : "isucon12q"
+      description : "ISUCON12 予選"
+      has_issues: true
+      has_projects: true
+    },
+    {
+      name : "isucon11q"
+      description : "ISUCON11 予選"
+      has_issues: true
+      has_projects: true
     },
   ]
 }

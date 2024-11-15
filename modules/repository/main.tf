@@ -6,7 +6,7 @@ resource "github_repository" "this" {
 
   visibility = try(var.repository_options.visibility, null)
 
-  has_wiki      = try(var.repository_options.has_wiki, true)
+  has_wiki      = try(var.repository_options.visibility, null) == "private" ? null : try(var.repository_options.has_wiki, true)
   has_issues    = try(var.repository_options.has_issues, null)
   has_projects  = try(var.repository_options.has_projects, null)
   has_downloads = true # TODO
