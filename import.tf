@@ -3,8 +3,6 @@
 locals {
   repos = [ # importしたいリポジトリに応じて適宜編集する
     # "github_as_code", # 例
-    "isucon12q",
-    "isucon11q",
   ]
 }
 
