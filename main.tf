@@ -60,6 +60,19 @@ locals {
       has_projects: true
     },
     {
+      name : "isucon14"
+      description : "ISUCON14"
+      visibility : "private"
+      has_issues: true
+      has_projects: true
+    },
+    {
+      name : "isucon12f"
+      description : "ISUCON12 本選"
+      has_issues: true
+      has_projects: true
+    },
+    {
       name : "isucon12q"
       description : "ISUCON12 予選"
       has_issues: true
