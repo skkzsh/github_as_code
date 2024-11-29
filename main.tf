@@ -38,10 +38,6 @@ locals {
       name : "note"
       homepage_url : "https://github.com/skkzsh/note/wiki"
     },
-    {
-      name : "aws"
-      homepage_url : "https://github.com/skkzsh/aws/wiki"
-    },
 
     # {
     #   name : "misc"
