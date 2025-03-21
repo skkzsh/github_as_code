@@ -8,6 +8,10 @@ locals {
       name : "try-actions"
       visibility : "private"
     },
+    {
+      name : "common-actions"
+      visibility : "private"
+    },
     { name : "runner" },
 
     {
