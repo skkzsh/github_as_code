@@ -10,7 +10,7 @@
 ## Terraform の version up
 1. `provider.tf` の `required_version` を上げる
 1. Terraform Cloud で [Terraform Version](https://app.terraform.io/app/skkzsh/workspaces/github_as_code/settings/general) を上げる
-1. (Optional) [.terraform-version](.terraform-version) を上げる
+1. (Optional) [.terraform-version](terraform/.terraform-version) を上げる
 
 ## provider の version up
 1. `provider.tf` の `version` を上げる
