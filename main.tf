@@ -42,6 +42,10 @@ locals {
       name : "note"
       homepage_url : "https://github.com/skkzsh/note/wiki"
     },
+    {
+      name : "qiita"
+      homepage_url : "https://qiita.com/skkzsh"
+    },
 
     # {
     #   name : "misc"
